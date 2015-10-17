@@ -13,31 +13,30 @@ Nightwatch custom assertion and commands, designed specifically for use with tes
 #### Things you should know:
 
 You'll currently get the most benefit from these e2e tests IF:
-    - Your game menus or gameplay is UI heavy - these are perfect areas for e2e testing. 
-    - Your game is using Phaser.StateManager to manage the various states of your game.
-    - Your game has complicated booting consisting of loading configs, externalised assets, and/or connections to 
-    servers or databases.
-    - Your game has well written loosley coupled modules
-    - You're building your game with browserify. (see Drawbacks)  
+- Your game menus or gameplay is UI heavy - these are perfect areas for e2e testing. 
+- Your game is using Phaser.StateManager to manage the various states of your game.
+- Your game has complicated booting consisting of loading configs, externalised assets, and/or connections to servers or databases.
+- Your game has well written loosley coupled modules
+- You're building your game with browserify. (see Drawbacks)  
     
     
 #### Drawbacks
 
 Some things this framework cannot test easily.
-    - Fully testing gameply.  Whilst this could be achieved with some well exposed API of your game actors, and some
-     very complicated tests... it's probably too much to expect a e2e framework to test all gameplay in a game.
-    - Any part of your game which needs to be used by thests must be avaiable globally. 
-    - If you're using browserify it will allow you to take advantage of an 
-    e2e module, this module will expose to the tests the modules of 
-    your game which you need exposed to the website's `window` object for manipulation by the tests.
-    - If you're not using browserify, an alternative method of gaining access to your game's modules will need to be 
-    found.  One way could be to append any modules your tests need access to to your Phaser.Game instance:
+- Fully testing gameply.  Whilst this could be achieved with some well exposed API of your game actors, and some
+ very complicated tests... it's probably too much to expect a e2e framework to test all gameplay in a game.
+- Any part of your game which needs to be used by thests must be avaiable globally. 
+- If you're using browserify it will allow you to take advantage of an 
+e2e module, this module will expose to the tests the modules of 
+your game which you need exposed to the website's `window` object for manipulation by the tests.
+- If you're not using browserify, an alternative method of gaining access to your game's modules will need to be 
+found.  One way could be to append any modules your tests need access to to your Phaser.Game instance:
     
-            `
-            game.e2e = {
-            player: player
-            }
-            `
+    `
+    game.e2e = {
+        player: player
+    }
+    `
        
 
 
@@ -63,13 +62,16 @@ cd to your phaser project and
 
 ### Ensure selenium standalone is installed and running.
 
-- Using npm selenium-standalone
+##### Using npm selenium-standalone
 
-`npm install selenium-standalone@latest -g`
-`selenium-standalone install`
-`selenium-standalone start`
+- `npm install selenium-standalone@latest -g`
+- `selenium-standalone install`
+- `selenium-standalone start`
 
-- Using java -jar
+##### Using java -jar
+- Download `selenium-server-standalone-{VERSION}.jar`
+- `java -jar path/to/selenium-server-standalone-{VERSION}.jar`
+
 
 ### Running
 
