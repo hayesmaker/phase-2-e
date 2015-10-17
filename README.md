@@ -7,8 +7,8 @@ Absolutely no one is e2e testing Canvas based HTML5 games, beyond some rudimenta
 Nightwatch is probably the simplest, most flexible and powerful HTML e2e framework currently available... And it's
 pre-packed with many DOM specific commands and assertions which you can use in your HTML websites and applications. 
 
-But if you're currently using Phaser to write your HTML5 games, then congratulations, you can now use this set of 
-Nightwatch custom assertion and commands, designed specifically for use with Phaser.
+But if you're currently using Phaser to write your HTML5 games, then you're in luck, you can use this set of 
+Nightwatch custom assertion and commands, designed specifically for use with testing Phaser E2E!.
 
 #### Things you should know:
 
