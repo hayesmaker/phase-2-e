@@ -74,8 +74,8 @@ cd to your phaser project and
 cd to your phaser project and
 `npm install phase-2-e --save-dev`
 
-- Copy ```nightwatch``` to your e2e test folder
- * ```test/e2e/nightwatch```
+- Copy ```nightwatch``` from node_modules/nightwatch to your e2e test folder
+ eg: ```test/e2e/nightwatch```
  
 - Update `nightwatch.json` or whatever nightwatch config you have
 
