@@ -120,5 +120,9 @@ your own.
 - For more info on extending nightwatch, see: http://nightwatchjs.org/guide#extending
 
 
-### Writing Tests
+### Run the examples:
+- There is a fully functioning load phaser game test suite which can demo, which you can run by following the steps
+in the examples README. https://github.com/hayesmaker/phase-2-e/tree/master/examples/thrust-engine
+
+
 
