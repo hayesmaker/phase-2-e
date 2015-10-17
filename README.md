@@ -12,13 +12,13 @@ Nightwatch custom assertion and commands, designed specifically for use with Pha
 
 #### Things you should know:
 
-- You'll currently get the most benefit from these e2e tests:
+- You'll currently get the most benefit from these e2e tests IF:
     - Your game menus or gameplay is UI heavy - these are perfect areas for e2e testing. 
-    - if your game is using Phaser.StateManager to manage the various states of your game.
+    - Your game is using Phaser.StateManager to manage the various states of your game.
     - Your game has complicated booting consisting of loading configs, externalised assets, and/or connections to 
     servers or databases.
-    - If your game has well written loosley coupled modules
-    - If you're building your game with browserify.  
+    - Your game has well written loosley coupled modules
+    - You're building your game with browserify. (see Drawbacks)  
     
     
 #### Drawbacks
