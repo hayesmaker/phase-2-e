@@ -1,6 +1,8 @@
 ## phase-2-e
 End to End testing framework for Phaser.  Backed by Nightwatch and Selenium.
-http://phaser.io/ http://nightwatchjs.org/ http://www.seleniumhq.org/
+- http://phaser.io/ 
+- http://nightwatchjs.org/ 
+- http://www.seleniumhq.org/
 
 Until now, e2e tests have mostly been the domain of RIA developers, websites and enterprise level applications, 
 Absolutely no one is e2e testing Canvas based HTML5 games, beyond some rudimentary screenshot checking. Phase-2-e aims to 
