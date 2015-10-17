@@ -1,0 +1,43 @@
+{
+  "name": "phase-2-e",
+  "version": "0.0.1",
+  "description": "End to End testing framework for Phaser. Backed by Nightwatch.",
+  "main": "none",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayesmaker/phase-2-e.git"
+  },
+  "keywords": [
+    "e2e",
+    "end",
+    "to",
+    "end",
+    "testing",
+    "tests",
+    "test",
+    "phaser",
+    "phase-2-e",
+    "phase2e",
+    "phaser.io",
+    "canvas e2e",
+    "html5 e2e"
+  ],
+  "author": "hayes_maker <andygoestohollywood@gmail.com> (http://hayesmaker.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hayesmaker/phase-2-e/issues"
+  },
+  "homepage": "https://github.com/hayesmaker/phase-2-e#readme",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.1",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "nightwatch": "^0.8.5"
+  }
+}
