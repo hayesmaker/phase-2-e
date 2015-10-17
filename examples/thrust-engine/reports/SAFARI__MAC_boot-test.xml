@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="2">
+
+  <testsuite name="boot-test"
+    errors="0" failures="1" hostname="" id="" package="boot-test" skipped="1"
+    tests="2" time="0.000" timestamp="Fri, 16 Oct 2015 14:52:53 GMT">
+  
+    <testcase name="Casino Framework Test Setup" time="73.97" assertions="2">
+
+      <failure message="Testing if the page title equals &quot;Spinning lines&quot;.">    at Object.title (/usr/local/lib/node_modules/nightwatch/lib/page-object/command-wrapper.js:103:25)
+    at Object.module.exports.Casino Framework Test Setup (/Users/hayesmaker/Workspace/contracts/high5/online/client_code/HTML5/CasinoEngine/test/e2e/nightwatch/tests/boot-test.js:7:15)
+    at Module.call (/usr/local/lib/node_modules/nightwatch/lib/runner/module.js:63:34)
+    at /usr/local/lib/node_modules/nightwatch/lib/runner/testcase.js:97:29
+    at _fulfilled (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:834:54)
+    at self.promiseDispatch.done (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:863:30)
+    at Promise.promise.promiseDispatch (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:796:13)
+    at /usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:556:49
+    at runSingle (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:137:13)
+    at flush (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:125:13)</failure>
+
+    
+    </testcase>
+  
+  
+    
+    <testcase
+      name="Test Phaser &amp; App Bootup">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

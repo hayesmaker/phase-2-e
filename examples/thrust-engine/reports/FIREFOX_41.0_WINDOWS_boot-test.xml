@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="boot-test"
+    errors="0" failures="0" hostname="" id="" package="boot-test" skipped="0"
+    tests="2" time="0.000" timestamp="Fri, 16 Oct 2015 14:38:37 GMT">
+  
+    <testcase name="Casino Framework Test Setup" time="37.78" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Test Phaser &amp; App Bootup" time="27.93" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>
