@@ -40,10 +40,11 @@ Some things e2e tests frameworks cannot test easily.
 - Although other types of games, turn based games, card games, strategy games, Casino Games aren't so problematic.
 - Globals: Any part of your game which needs to be used by your e2e tests must be avaiable globally (available on `window`) This 
  is because the tests use the Selenium Protocol API to interact with objects in your game.  If you don't want your game
- objects to be global in your main app, you'll need a build of your game which does to run your tests on.  (see #Global module access in E2E Builds)
-- You must use modules. If you aren't already writing your JS as modules, please start doing so, or give up JS. You can 
+ objects to be global in your production version, you'll need a specific build of your game for your tests to use.  
+ (see *E2E / Production Builds*)
+- You must use modules. If you aren't already writing your JS as modules, please start doing so, or give up JS :troll-face: You can 
  read about it here: http://addyosmani.com/writing-modular-js/
-- Your UI elements must follow a common interface to make the 
+- Your UI elements should follow a common interface to facilitate nightwatch commands execute your UI in a generic way. More about this later.
 
 ### E2E / Production Builds
 - If you don't want global access to ingame modules in your production build, then you  can use a NODE_ENV flag in your code to let the 
@@ -75,10 +76,10 @@ cd to your phaser project and
 cd to your phaser project and
 `npm install phase-2-e --save-dev`
 
-- Copy ```nightwatch``` from node_modules/nightwatch to your e2e test folder
- eg: ```test/e2e/nightwatch```
+- Copy `lib` folder from `node_modules/nightwatch/` to your e2e test folder
+ eg: `test/e2e/lib`
  
-- Update `nightwatch.json` or whatever nightwatch config you have
+- Update `nightwatch.json` or whatever nightwatch configs you have
 
 
 ### Ensure selenium standalone is installed and running.
@@ -96,14 +97,14 @@ cd to your phaser project and
 
 ### Running
 
-- If you haven't already, create a ```nightwatch.json``` config file inside your nightwatch folder (you may create 
+- If you haven't already, create a `nightwatch.json` config file inside your nightwatch folder (you may create 
 multiple configs for testing in different environments), eg. In Browserstack.
 
 - ensure custom-assertions, and custom-commands folder's are set in each config file
 
 - create a test folder and run tests via command:
 
-- Run `nighwatch` from folder with nightwatch.json or `nightwach -c path/to/config.json`
+- Run `nightwatch` from folder with `nightwatch.json` or `nightwatch -c path/to/config.json`
 
 
 ### Extending
