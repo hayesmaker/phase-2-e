@@ -125,4 +125,35 @@ your own.
 in the examples README. https://github.com/hayesmaker/phase-2-e/tree/master/examples/thrust-engine
 
 
+### Writing Tests
+- And now the fun part.. This is how you can write your e2e tests:
+```
+module.exports = {
+  'Phaser Game Boots Test' : function (client) {
 
+    var thrustEngine = client.page.thrustEngine();
+    thrustEngine.navigate()
+      .waitForElementVisible('body', 1000)
+      .assert.title('Thrust Engine')
+  },
+
+  'Phaser Game Loads Test': function (client) {
+    client
+      .waitForPhaser(3000)
+      .waitForGame(3000)
+      .waitForState('play', 5000);
+
+    client.end();
+  }
+};
+```
+
+`client.page.thrustEngine` refers to a file inside a page-objects folder, see examples.
+It's not necessary to write a page-object, you can navigate to a url in your test like:
+
+```
+client
+   .url('http://www.google.com')
+   .waitForElementVisible('body', 1000)
+   .assert.title('Thrust Engine')
+```
