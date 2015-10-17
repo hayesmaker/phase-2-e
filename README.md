@@ -1,5 +1,6 @@
 ## phase-2-e
 End to End testing framework for Phaser.  Backed by Nightwatch and Selenium.
+http://phaser.io/ http://nightwatchjs.org/ http://www.seleniumhq.org/
 
 Until now, e2e tests have mostly been the domain of RIA developers, websites and enterprise level applications, 
 Absolutely no one is e2e testing Canvas based HTML5 games, beyond some rudimentary screenshot checking. Phase-2-e aims to 
@@ -11,7 +12,7 @@ But how do you use a DOM specific API to test in CANVAS components and game scen
  these Phaser specific custom commands and assertions for Nightwatch have been written to help you join the cutting edge
  of Phaser game developers who are starting to realise the potential of e2e testing in games.
 
-But if you're currently using Phaser to write your HTML5 games, then you're in luck, you can use this set of 
+If you're currently using Phaser to write your HTML5 games, then you're in luck, you can use this set of 
 Nightwatch custom assertion and commands, designed specifically for use with testing Phaser E2E!.
 
 #### Getting the most out of E2E
