@@ -1,5 +1,5 @@
 ## phase-2-e
-End to End testing framework for Phaser.  Backed by Nightwatch and Selenium.
+Custom Nightwatch extenstion for end to end testing <CANVAS> based HTML5 games written with Phaser.  Backed by Nightwatch and Selenium.
 - http://phaser.io/ 
 - http://nightwatchjs.org/ 
 - http://www.seleniumhq.org/
