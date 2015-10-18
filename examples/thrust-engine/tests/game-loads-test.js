@@ -25,7 +25,10 @@ module.exports = {
       .waitForActors(5000);
   },
 
-  'Testing Player Control': function (client) {
+  // These commands are specific to the thrust-engine example, and show
+  // how one can control the player from an e2e test.
+  // There are currently no assertions, just demoing the capabilities of the tests.
+  'Demo Player Control from Tests': function (client) {
     client
       .hijackPlayerControls()
       .pause(2000)
