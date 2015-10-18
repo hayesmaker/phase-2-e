@@ -75,11 +75,8 @@ cd to your phaser project and
 
 cd to your phaser project and
 `npm install phase-2-e --save-dev`
-
-- Copy `lib` folder from `node_modules/nightwatch/` to your e2e test folder
- eg: `test/e2e/lib`
  
-- Update `nightwatch.json` or whatever nightwatch configs you have
+- Add the `lib/custom-commands` and `lib/custom-assertions` folders to your own nightwatch config, in our example it's the `nightwatch.json` file.
 
 
 ### Ensure selenium standalone is installed and running.
