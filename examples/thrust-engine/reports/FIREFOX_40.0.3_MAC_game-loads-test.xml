@@ -5,16 +5,16 @@
 
   <testsuite name="game-loads-test"
     errors="0" failures="0" hostname="" id="" package="game-loads-test" skipped="0"
-    tests="4" time="0.000" timestamp="Sun, 18 Oct 2015 16:39:28 GMT">
+    tests="4" time="0.000" timestamp="Sun, 18 Oct 2015 19:39:21 GMT">
   
-    <testcase name="Phaser Game Boots Test" time="3.169" assertions="2">
+    <testcase name="Phaser Game Boots Test" time="3.424" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Phaser Game Loads Test" time="0.1130" assertions="4">
+    <testcase name="Phaser Game Loads Test" time="0.1530" assertions="4">
 
     
 
@@ -25,12 +25,14 @@
     
     </testcase>
   
-    <testcase name="E2E Actors are avaialable to test" time="0.03000" assertions="1">
+    <testcase name="E2E Actors are avaialable to test" time="0.09300" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Testing Player Control" time="17.02" assertions="0">
+    <testcase name="Demo Player Control from Tests" time="16.29" assertions="1">
+
+    
     </testcase>
   
   

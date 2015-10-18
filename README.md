@@ -35,9 +35,11 @@ You'll currently get the most benefit from these e2e tests IF:
 
 Some things e2e tests frameworks cannot test easily.
 
-- Fully testing gameplay.  Whilst this has been achieved with some well exposed API of game actors, and some
- very complicated tests... it's probably expecting too much, to expect a e2e framework to test all gameplay in an arcade game.
-- Although other types of games, turn based games, card games, strategy games, Casino Games aren't so problematic.
+- Fully testing gameplay.  Whilst this could be achieved with some well exposed API of game actors, and some
+ very complicated tests... it's probably expecting too much to expect your e2e framework to test all gameplay in an arcade game. However it is possible, and in the 
+ `examples/thrust-engine` test suite, you can see how these kind of tests could be achieved.
+- Oher types of games, turn based games, card games, strategy games, Casino Games aren't so problematic.  And lend themselves
+very well to this type of testing.
 - Globals: Any part of your game which needs to be used by your e2e tests must be avaiable globally (available on `window`) This 
  is because the tests use the Selenium Protocol API to interact with objects in your game.  If you don't want your game
  objects to be global in your production version, you'll need a specific build of your game for your tests to use.  

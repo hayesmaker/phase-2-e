@@ -51,11 +51,19 @@ module.exports = {
       .playerRotate(-100)
       .playerRotate(-100)
       .playerRotate(-100)
+      .playerRotate(-100)
+      .playerRotate(-100)
+      .playerRotate(-100)
+      .playerRotate(-100)
+      .playerRotate(-100)
+      .playerRotate(-100)
+      .playerRotate(-100)
       .playerZeroRotation()
-      .playerThrust(1000)
       .pause(1000)
-      .playerThrust(1000)
-      .pause(6000)
+      .playerThrust(20000)
+      .pause(5000)
+      .playerThrust(10000)
+      .assert.playerIsDead()
       .end();
   }
 };

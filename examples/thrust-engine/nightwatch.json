@@ -2,7 +2,7 @@
   "src_folders" : ["./tests/"],
   "output_folder" : "reports",
   "custom_commands_path" : ["../../lib/custom-commands/", "./custom-commands"],
-  "custom_assertions_path" : "../../lib/custom-assertions/",
+  "custom_assertions_path" : ["../../lib/custom-assertions/", "./custom-assertions"],
   "page_objects_path" : "./page-objects/",
 
   "selenium" : {
