@@ -1,5 +1,5 @@
 module.exports = {
-  url: 'http://thrust-engine.herokuapp.com',
+  url: 'http://localhost:3099',
   sections: {
 
   }

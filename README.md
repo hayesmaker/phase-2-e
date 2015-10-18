@@ -153,7 +153,7 @@ It's not necessary to write a page-object, you can navigate to a url in your tes
 
 ```
 client
-   .url('http://www.google.com')
+   .url('http://thrust-engine.herokuapp.com')
    .waitForElementVisible('body', 1000)
    .assert.title('Thrust Engine')
 ```

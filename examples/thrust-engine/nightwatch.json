@@ -1,7 +1,7 @@
 {
   "src_folders" : ["./tests/"],
   "output_folder" : "reports",
-  "custom_commands_path" : "../../lib/custom-commands/",
+  "custom_commands_path" : ["../../lib/custom-commands/", "./custom-commands"],
   "custom_assertions_path" : "../../lib/custom-assertions/",
   "page_objects_path" : "./page-objects/",
 
@@ -30,7 +30,9 @@
       "desiredCapabilities": {
         "browserName": "firefox",
         "javascriptEnabled": true,
-        "acceptSslCerts": true
+        "acceptSslCerts": true,
+        "handlesAlerts": true,
+        "unexpectedAlertBehaviour": "accept"
       }
     },
 
