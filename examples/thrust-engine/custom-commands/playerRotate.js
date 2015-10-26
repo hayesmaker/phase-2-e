@@ -1,26 +1,61 @@
-exports.command = function(thrustAmount, callback) {
+var util = require('util');
+var events = require('events');
+
+/**
+ * Rotates the player ship at a fixed speed, for duration ms then stop rotating
+ * and continue the tests.
+ *
+ * ```
+ * this.demoTest = function (browser) {
+ *   browser.playerRotate(100, 500);
+ * };
+ * ```
+ *
+ * @method pause
+ * @param {number} speed
+ * @param {number} ms The number of milliseconds to wait.
+ * @param {function} [callback] Optional callback function to be called when the command finishes.
+ * @api commands
+ */
+
+function PlayerRotate() {
+  events.EventEmitter.call(this);
+}
+
+util.inherits(PlayerRotate, events.EventEmitter);
+
+
+PlayerRotate.prototype.command = function(speed, ms, cb) {
   var self = this;
 
-  this.execute(
-    function(thrustAmount) { // execute application specific code
-      var e2e = window.Phaser.GAMES[0].e2e;
-      var player = e2e.player;
-      if (thrustAmount < 0) {
-        player.body.rotateLeft(Math.abs(thrustAmount));
-      }  else {
-        player.body.rotateRight(thrustAmount);
-      }
-    },
+  console.log('playerRotate(', speed,  ms, ')');
 
-    [thrustAmount], // arguments array to be passed
+  // If we don't pass the milliseconds, and speed, the client will
+  // be suspended indefinitely
+  if (!ms || !speed) {
+    return this;
+  }
 
-    function() {
-      if (callback) {
-        callback.call(self);
-      }
+  this.api.executeAsync(function(speed, ms, done) {
+    var e2e = window.Phaser.GAMES[0].e2e;
+    var player = e2e.player;
+    player.rotate(speed);
 
+    setTimeout(function() {
+      player.body.setZeroRotation();
+      done();
+    }, ms)
+
+  }, [speed, ms], function() {
+
+    if (cb) {
+      cb.call(self);
     }
-  );
 
-  return this; // allows the command to be chained.
+    self.emit('complete');
+  });
+
+  return this;
 };
+
+module.exports = PlayerRotate;

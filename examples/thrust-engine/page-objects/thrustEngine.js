@@ -1,5 +1,5 @@
 module.exports = {
-  url: 'http://localhost:3099',
+  url: 'http://localhost:3099/app',
   sections: {
 
   }

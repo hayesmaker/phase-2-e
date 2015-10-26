@@ -9,7 +9,7 @@ exports.assertion = function() {
    * inside the XML reports
    * @type {string}
    */
-  this.message = util.format(DEFAULT_MSG, true);
+  this.message = util.format(DEFAULT_MSG);
 
   /**
    * A value to perform the assertion on. If a function is
@@ -58,7 +58,7 @@ exports.assertion = function() {
   this.command = function(callback) {
 
     return this.api.execute(function(callback) {
-      return window.Phaser.GAMES[0].e2e.player.isDead;
+      return window.Phaser.GAMES[0].e2e.player.isDead === true;
     }, [], callback);
 
   };

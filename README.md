@@ -126,6 +126,8 @@ in the examples README. https://github.com/hayesmaker/phase-2-e/tree/master/exam
 
 ### Writing Tests
 - And now the fun part.. This is how you can write your e2e tests:
+- See the thrust-engine example tests to see how custom-commands can be created specifically for a game.
+
 ```
 module.exports = {
   'Phaser Game Boots Test' : function (client) {
@@ -141,18 +143,19 @@ module.exports = {
       .waitForPhaser(3000)
       .waitForGame(3000)
       .waitForState('play', 5000);
-
-    client.end();
   }
+  
+  'Control Player from Tests': function (client) {
+      client
+        .hijackPlayerControls()
+        .pause(2000)
+        .playerThrust(20000, function() {
+          console.log('player thrust');
+        })
+        .playerRotate(100, 1000)
+        .pause(3000)
+        .assert.playerIsDead()
+        .end();
+    }
 };
-```
-
-`client.page.thrustEngine` refers to a file inside a page-objects folder, see examples.
-It's not necessary to write a page-object, you can navigate to a url in your test like:
-
-```
-client
-   .url('http://thrust-engine.herokuapp.com')
-   .waitForElementVisible('body', 1000)
-   .assert.title('Thrust Engine')
 ```
