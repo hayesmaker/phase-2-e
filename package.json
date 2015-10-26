@@ -1,6 +1,6 @@
 {
   "name": "phase-2-e",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "End to End testing framework for Phaser. Backed by Nightwatch.",
   "main": "none",
   "scripts": {
