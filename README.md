@@ -5,6 +5,10 @@ Backed by Nightwatch and Selenium.
 - http://nightwatchjs.org/ 
 - http://www.seleniumhq.org/
 
+Add automation with TravisCI and Browserstack
+- https://travis-ci.org/hayesmaker/thrust-engine
+- http://browserstack.com/automate
+
 Until now, e2e tests have mostly been the domain of RIA developers, websites and enterprise level applications, 
 Absolutely no one is e2e testing Canvas based HTML5 games, beyond some rudimentary screenshot checking. Phase-2-e aims to 
 change this state of affairs.
@@ -147,11 +151,8 @@ module.exports = {
   
   'Control Player from Tests': function (client) {
       client
-        .hijackPlayerControls()
         .pause(2000)
-        .playerThrust(20000, function() {
-          console.log('player thrust');
-        })
+        .playerThrust(20000)
         .playerRotate(100, 1000)
         .pause(3000)
         .assert.playerIsDead()
@@ -159,3 +160,16 @@ module.exports = {
     }
 };
 ```
+> This is an example only, to show how test hooks can be used. 
+> Write nightwatch custom-commands using phase-2-e's as a template to test your own game code.
+
+- Watch some fully automated tests in action courtesy of TravisCI & Browserstack:
+- https://www.youtube.com/watch?v=foTPMehH_a4
+- Passing Build: https://travis-ci.org/hayesmaker/thrust-engine/builds/103173713
+
+> Future:
+- More custom-commands to make plugging phase-2-e to ease adding tests to your own phaser project
+- Browserstack and Travis integration out of the box. (Currently you can already see a working integration at
+https://github.com/hayesmaker/thrust-engine)
+
+
