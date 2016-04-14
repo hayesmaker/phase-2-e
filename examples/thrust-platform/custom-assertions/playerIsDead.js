@@ -58,7 +58,7 @@ exports.assertion = function() {
   this.command = function(callback) {
 
     return this.api.execute(function(callback) {
-      return window.Phaser.GAMES[0].e2e.player.isDead === true;
+      return window.Phaser.GAMES[0].e2e.player.alive === false;
     }, [], callback);
 
   };

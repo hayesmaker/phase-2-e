@@ -1,0 +1,126 @@
+{
+  "src_folders" : ["./tests/"],
+  "output_folder" : "reports",
+  "custom_commands_path" : ["../../../node_modules/phase-2-e/lib/custom-commands/", "./custom-commands"],
+  "custom_assertions_path" : ["../../../node_modules/phase-2-e/lib/custom-assertions/", "./custom-assertions"],
+  "page_objects_path" : "./page-objects/",
+  "type" : "mocha",
+  "options" : {
+    "ui" : "tdd",
+    "reporter" : "list"
+  },
+
+  "test_settings" : {
+
+    "default" : {
+      "launch_url" : "",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "handlesAlerts": true,
+        "unexpectedAlertBehaviour": "accept"
+      }
+    },
+
+    "travis": {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "build": "${BS_AUTOMATE_BUILD}",
+        "project": "${BS_AUTOMATE_PROJECT}",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserName": "Safari",
+        "browser_version": "8.0",
+        "os": "OS X",
+        "os_version": "Yosemite",
+        "resolution": "1024x768",
+        "browserstack.local": true,
+        "browserstack.user": "${BROWSERSTACK_USER}",
+        "browserstack.key": "${BROWSERSTACK_ACCESS_KEY}",
+        "browserstack.debug": true
+      }
+    },
+
+    "browserstack": {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.local" : true,
+        "browserstack.user": "${BROWSERSTACK_USER}",
+        "browserstack.key": "${BROWSERSTACK_ACCESS_KEY}",
+        "browserstack.debug": true
+      }
+    },
+
+    "browserstack:ipad": {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "reports/screenshots"
+      },
+      "desiredCapabilities": {
+        "device": "iPad Air 2",
+        "os": "ios",
+        "browser": "iPad",
+        "deviceOrientation": "landscape",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.local" : true,
+        "browserstack.user": "${BROWSERSTACK_USER}",
+        "browserstack.key": "${BROWSERSTACK_ACCESS_KEY}",
+        "browserstack.debug": true
+      }
+    },
+
+    "browserstack:iPhone6SPlus": {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "reports/screenshots"
+      },
+      "desiredCapabilities": {
+        "device": "iPhone 6S Plus",
+        "os": "ios",
+        "browser": "iPhone",
+        "deviceOrientation": "landscape",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.local" : true,
+        "browserstack.user": "${BROWSERSTACK_USER}",
+        "browserstack.key": "${BROWSERSTACK_ACCESS_KEY}",
+        "browserstack.debug": true
+      }
+    }
+
+  }
+}

@@ -8,7 +8,7 @@ module.exports = {
    * @param browser
    */
   before: function(browser){
-    browser.resizeWindow(640, 480);
+    browser.resizeWindow(800, 600);
   },
 
   /**
@@ -20,11 +20,9 @@ module.exports = {
    * @param client
    */
   'Phaser Game Boots Test' : function (client) {
-
-    var thrustEngine = client.page.thrustEngine();
+    var thrustEngine = client.page.thrustPlatform();
     thrustEngine.navigate()
       .waitForElementVisible('body', 1000)
-      .assert.title('Thrust Engine')
   },
 
   /**
@@ -36,10 +34,10 @@ module.exports = {
    */
   'Phaser Game Loads Test': function (client) {
     client
-      .waitForPhaser(3000)
-      .waitForGame(3000)
-      .waitForState('play', 5000)
-      .assert.currentState('play');
+      .waitForPhaser(5000)
+      .waitForGame(5000)
+      .waitForState('boot', 5000)
+      .assert.currentState('boot');
   },
 
   /**
@@ -52,7 +50,11 @@ module.exports = {
    */
   'E2E Actors are avaialable to test' : function (client) {
     client
-      .waitForActors(5000);
+      .waitForActors(10000)
+      .beginDemo()
+      .waitForState('play', 10000)
+      .assert.currentState('play')
+      .waitForPlayerSpawn(20000)
   },
 
 
@@ -68,22 +70,17 @@ module.exports = {
    */
   'Demo Player Control from Tests': function (client) {
     client
-      .beginDemo()
-      .pause(2300)
-      .playerThrust(400, 1100)
-      .pause(1000)
-      .playerRotate(100, 150)
+      .pause(600)
+      .playerThrust(400, 500)
+      .pause(1200)
+      .playerThrust(400, 750)
+      .pause(1500)
+      .playerThrust(300, 500)
       .pause(500)
-      .playerThrust(400, 600)
-      .pause(1000)
-      .playerThrust(400, 600)
-      .pause(2000)
-      .playerRotate(-100, 250)
+      .playerRotate(100, 200)
       .pause(500)
-      .playerThrust(400, 1000)
-      .pause(10000)
-      //.playerThrust(400, 1000)
-      .assert.playerIsDead()
+      .playerThrust(500, 400)
+      .pause(3000)
       .end();
   }
 };

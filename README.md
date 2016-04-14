@@ -6,7 +6,7 @@ Backed by Nightwatch and Selenium.
 - http://www.seleniumhq.org/
 
 Add automation with TravisCI and Browserstack
-- https://travis-ci.org/hayesmaker/thrust-engine
+- https://travis-ci.org/hayesmaker/thrust-platform
 - http://browserstack.com/automate
 
 Until now, e2e tests have mostly been the domain of RIA developers, websites and enterprise level applications, 
@@ -125,12 +125,12 @@ your own.
 
 ### Run the examples:
 - There is a fully functioning load phaser game test suite which can demo, which you can run by following the steps
-in the examples README. https://github.com/hayesmaker/phase-2-e/tree/master/examples/thrust-engine
+in the examples README. https://github.com/hayesmaker/phase-2-e/tree/master/examples/thrust-platform
 
 
 ### Writing Tests
 - And now the fun part.. This is how you can write your e2e tests:
-- See the thrust-engine example tests to see how custom-commands can be created specifically for a game.
+- See the thrust-platform example tests to see how custom-commands can be created specifically for a game.
 
 ```
 module.exports = {
@@ -165,11 +165,11 @@ module.exports = {
 
 - Watch some fully automated tests in action courtesy of TravisCI & Browserstack:
 - https://www.youtube.com/watch?v=foTPMehH_a4
-- Passing Build: https://travis-ci.org/hayesmaker/thrust-engine/builds/103173713
+- Passing Build: https://travis-ci.org/hayesmaker/thrust-platform/builds/103173713
 
 > Future:
 - More custom-commands to make plugging phase-2-e to ease adding tests to your own phaser project
 - Browserstack and Travis integration out of the box. (Currently you can already see a working integration at
-https://github.com/hayesmaker/thrust-engine)
+https://github.com/hayesmaker/thrust-platform)
 
 
