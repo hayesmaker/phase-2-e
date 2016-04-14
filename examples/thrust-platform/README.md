@@ -6,6 +6,8 @@
 `cd examples/thrust-platform/`
 `nightwatch`
 
+(Or run `npm test` from phase-2-e root)
+
 
 # Run Tests in browsertack
 - Note you'll need your own browserstack account to integrate your tests with 
