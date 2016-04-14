@@ -20,8 +20,8 @@ module.exports = {
    * @param client
    */
   'Phaser Game Boots Test' : function (client) {
-    var thrustEngine = client.page.thrustPlatform();
-    thrustEngine.navigate()
+    var thrust = client.page.thrustPlatform();
+    thrust.navigate()
       .waitForElementVisible('body', 1000)
   },
 

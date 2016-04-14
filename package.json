@@ -2,9 +2,9 @@
   "name": "phase-2-e",
   "version": "0.2.0",
   "description": "End to End testing framework for Phaser. Backed by Nightwatch.",
-  "main": "none",
+  "main": "lib/app.js",
   "scripts": {
-    "test": "npm test"
+    "test": "echo 'Running Phase-2-e example tests - Ensure Selenium is running' && cd examples/thrust-platform && nightwatch"
   },
   "repository": {
     "type": "git",

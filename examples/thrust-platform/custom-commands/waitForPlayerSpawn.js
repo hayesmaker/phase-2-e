@@ -1,5 +1,5 @@
 var util = require('util');
-var WaitFor = require('../../../../node_modules/phase-2-e/lib/custom-commands/_waitFor');
+var WaitFor = require('../../../lib/custom-commands/_waitFor');
 
 /**
  * Waits a given time in milliseconds for a the E2E Module Game to be available in the Phaser.Game instance before performing any other commands or assertions.

@@ -1,8 +1,8 @@
 {
   "src_folders" : ["./tests/"],
   "output_folder" : "reports",
-  "custom_commands_path" : ["../../../node_modules/phase-2-e/lib/custom-commands/", "./custom-commands"],
-  "custom_assertions_path" : ["../../../node_modules/phase-2-e/lib/custom-assertions/", "./custom-assertions"],
+  "custom_commands_path" : ["../../lib/custom-commands/", "./custom-commands"],
+  "custom_assertions_path" : ["../../lib/custom-assertions/", "./custom-assertions"],
   "page_objects_path" : "./page-objects/",
   "type" : "mocha",
   "options" : {

@@ -134,28 +134,34 @@ in the examples README. https://github.com/hayesmaker/phase-2-e/tree/master/exam
 
 ```
 module.exports = {
-  'Phaser Game Boots Test' : function (client) {
-
-    var thrustEngine = client.page.thrustEngine();
-    thrustEngine.navigate()
-      .waitForElementVisible('body', 1000)
-      .assert.title('Thrust Engine')
-  },
-
-  'Phaser Game Loads Test': function (client) {
-    client
-      .waitForPhaser(3000)
-      .waitForGame(3000)
-      .waitForState('play', 5000);
-  }
+    'Phaser Game Boots Test' : function (client) {
+        var thrust = client.page.thrustPlatform();
+        thrust.navigate()
+          .waitForElementVisible('body', 1000)
+      },
   
-  'Control Player from Tests': function (client) {
+    'E2E Actors are avaialable to test' : function (client) {
       client
-        .pause(2000)
-        .playerThrust(20000)
-        .playerRotate(100, 1000)
+        .waitForActors(10000)
+        .beginDemo()
+        .waitForState('play', 10000)
+        .assert.currentState('play')
+        .waitForPlayerSpawn(20000)
+    },
+
+    'Tests can even take control of your Player': function (client) {
+      client
+        .pause(600)
+        .playerThrust(400, 500)
+        .pause(1200)
+        .playerThrust(400, 750)
+        .pause(1500)
+        .playerThrust(300, 500)
+        .pause(500)
+        .playerRotate(100, 200)
+        .pause(500)
+        .playerThrust(500, 400)
         .pause(3000)
-        .assert.playerIsDead()
         .end();
     }
 };
