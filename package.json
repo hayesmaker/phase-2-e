@@ -33,11 +33,11 @@
   "homepage": "https://github.com/hayesmaker/phase-2-e#readme",
   "devDependencies": {
     "chai": "^3.3.0",
-    "mocha": "^2.3.3",
+    "mocha": "^5.2.0",
     "sinon": "^1.17.1",
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "nightwatch": "^0.8.5"
+    "nightwatch": "^1.0.11"
   }
 }
